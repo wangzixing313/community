@@ -16,10 +16,9 @@
 
 ## 脚本
 ```sql
-create table USER
+CREATE TABLE USER
 (
-	ID INT auto_increment
-		primary key,
+	ID INT AUTO_INCREMENT PRIMARY KEY,
 	ACCOUNT_ID VARCHAR(100),
 	NAME VARCHAR(50),
 	TOKEN CHAR(36),
