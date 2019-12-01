@@ -8,11 +8,14 @@
 [Bootstrap](https://v3.bootcss.com/getting-started/)  
 [Github OAuth](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/)  
 [Spring](https://docs.spring.io/spring-boot/docs/2.0.0.RC1/reference/htmlsingle/#boot-features-embedded-database-support)  
-[Spring Boot Mybatis](http://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/)
+[Spring Boot Mybatis](http://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/)  
+[Thymeleaf](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#setting-attribute-values)
 
 ## 工具
 [Git](https://git-scm.com/download)  
-[Visual paradigm](https://www.visual-paradigm.com)
+[Visual paradigm](https://www.visual-paradigm.com)  
+[Flyway](https://flywaydb.org/getstarted/firststeps/maven)  
+[Lombok](https://projectlombok.org/)
 
 ## 脚本
 ```sql
@@ -25,3 +28,9 @@ CREATE TABLE USER
 	GMT_CREATE BIGINT,
 	GMT_MODIFIED BIGINT
 );
+```
+```bash
+mvn flyway:migration
+```
+
+
