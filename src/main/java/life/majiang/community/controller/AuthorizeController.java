@@ -50,12 +50,15 @@ public class AuthorizeController {
             String token = UUID.randomUUID().toString();
             user.setToken(token);
             user.setName(githubUser.getName());
-            user.setAccountId(githubUser.getId()+"");
+            user.setAccountId(githubUser.getId() + "");
             user.setGmtCreate(System.currentTimeMillis());
             user.setGmtModified(user.getGmtCreate());
             user.setAvatarUrl(githubUser.getAvatarUrl());
-            userMapper.insert(user);
-            response.addCookie(new Cookie("token",token));
+            // 判断用户是否已存在
+            if (userMapper.findByAccountId(user.getAccountId()) == null) {
+                userMapper.insert(user);
+            }
+            response.addCookie(new Cookie("token", token));
             return "redirect:/";
         } else {
             // 登录失败，重新登录
